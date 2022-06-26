@@ -1,0 +1,52 @@
+.toggler {
+  height: 75px;
+  width: 150px;
+  display: inline-block;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  cursor: pointer;
+  transition: .4s;
+  background-color: rgb(183, 183, 183);
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.slide:before {
+  position: absolute;
+  content: "";
+  height: 60px;
+  width: 60px;
+  left: 4px;
+  bottom: 7px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+input:checked+.slide {
+  background-color: rgb(3, 131, 3);
+}
+
+input:checked+.slide:before {
+  transform: translateX(80px);
+}
+
+* {
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
